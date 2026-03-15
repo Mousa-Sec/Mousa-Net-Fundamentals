@@ -18,3 +18,13 @@ Modern networks separate the decision-making from the actual data forwarding.
 ## The Attack Surface
 * **Targeting the Control Plane:** If the central SDN controller is compromised, the attacker dictates traffic flow for the entire network.
 * **IaC Vulnerabilities:** A single typo in an automation script can deploy hundreds of misconfigured, vulnerable cloud firewalls simultaneously.
+
+## Advanced Cloud Concepts (Exam Compass Patch)
+* **SaaS:** Software for end-users (e.g., Office 365).
+* **PaaS:** Platforms for developers to build apps.
+* **Multitenancy:** Multiple customers sharing one software instance securely.
+* **NSG (Network Security Group):** A firewall applied to a specific Virtual NIC (highly granular).
+* **NSL / NACL (Network Security List):** A firewall applied to an entire Subnet (less granular).
+* **Internet Gateway:** Allows 2-way internet traffic for cloud instances.
+* **NAT Gateway:** Allows outbound internet access but restricts unsolicited inbound traffic.
+* **Direct Connect:** A dedicated, private physical connection to a cloud provider (bypasses the public internet).
