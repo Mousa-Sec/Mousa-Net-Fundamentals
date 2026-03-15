@@ -43,3 +43,12 @@ Uses pulses of light. Completely immune to EMI and wiretapping.
   * **SFP (Small Form-factor Pluggable):** Supports 1 Gbps fiber connections.
   * **SFP+ (Enhanced SFP):** Supports 10 Gbps fiber connections.
   * **QSFP (Quad SFP):** Supports 40 Gbps fiber connections.
+
+## 5. Specialized Network Devices (Objective 1.2)
+* **Load Balancer:** Distributes traffic across multiple servers for fault tolerance and performance.
+  * *Layer 4 vs Layer 7:* Can route based on TCP ports (L4) or read the actual URL/Application data (L7).
+  * *SSL/TLS Offloading:* Handles the heavy CPU math of encryption/decryption so the backend servers don't have to.
+* **Proxy Server:** A middleman device that makes requests on behalf of another machine.
+  * *Forward Proxy:* Protects internal users. Hides user IPs from the internet and filters outbound URLs (Corporate web filter).
+  * *Reverse Proxy:* Protects internal servers. Sits on the internet edge to intercept and scrub inbound traffic before it hits the real web server.
+  * *Transparent Proxy:* Intercepts traffic without the client needing to configure anything or knowing it exists.
