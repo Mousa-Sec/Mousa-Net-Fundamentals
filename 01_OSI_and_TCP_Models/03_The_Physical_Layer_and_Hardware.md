@@ -34,3 +34,15 @@
   * *Multimode:* LEDs, shorter LANs/Data Centers.
 * **Fiber Connectors:** LC (clips), ST (bayonet twist), SC (square push-pull).
 * **Transceivers:** SFP (1 Gbps), SFP+ (10 Gbps), QSFP (40 Gbps).
+
+## 4. Copper Cabling Standards (Objective 1.5 - Transcript Verified)
+* **Twisted Pair Mechanics:** Wires are paired and twisted at different rates to cancel out Electromagnetic Interference (EMI). The 802.3 Ethernet standard dictates the minimum category required (e.g., 1000BASE-T requires at least Cat 5).
+  * *Categories:* Cat 5e (1 Gbps / 100m), Cat 6 (10 Gbps / 55m), Cat 6a (10 Gbps / 100m).
+* **Coaxial Cable:** A single copper conductor surrounded by an insulator, shielding, and a jacket that all share a common axis.
+  * *RG-6:* The standard coaxial cable used for bringing ISP/Cable Modem connections into a data center or home.
+* **Twinaxial Cable (Twinax):** Contains two inner conductors. 
+  * *Use Case:* Directly connects 10 Gbps Ethernet using SFP+ transceivers. 
+  * *Limitations:* Extremely fast (lower latency than twisted pair) and cheap, but strictly limited to very short distances (**Maximum 5 meters**). Used mostly for connecting switches within the same server rack.
+* **Cable Jackets (Plenum vs. Non-Plenum):**
+  * *Non-Plenum (PVC):* Made of standard Polyvinyl Chloride. Releases toxic fumes and heavy smoke if burned. Never put in shared airspaces.
+  * *Plenum-Rated (FEP):* Made of Fluorinated Ethylene Polymer or low-smoke PVC. Fire-retardant. Mandatory for drop-ceilings and shared HVAC airspaces. Less physically flexible than standard PVC.
