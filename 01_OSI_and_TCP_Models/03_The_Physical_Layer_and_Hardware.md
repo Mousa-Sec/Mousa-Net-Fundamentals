@@ -68,3 +68,14 @@ Uses light instead of electrical RF signals. Completely immune to Radio Frequenc
 * **RJ45 (Registered Jack 45):** 8-position, 8-conductor (8P8C). The standard connector for Ethernet LAN connections.
 * **F-Connector:** A threaded, screw-on connector used with coaxial cable. Extremely common for bringing Cable Modem (DOCSIS) ISP connections into a building.
 * **BNC Connector (Bayonet Neill-Concelman):** A push-and-twist bayonet connector used with coaxial cable. Used frequently in WANs or legacy networks because it locks securely into place and cannot be easily pulled out by accident.
+
+## 7. Advanced Cabling Specs & Exam Tricks (ExamCompass Patch)
+* **The 100-Meter Rule:** The standard maximum distance for almost all twisted-pair Ethernet cables (Cat 5, Cat 5e, Cat 6a) before signal degradation (attenuation) is **100 meters**.
+  * *The Exception:* Cat 6 can run 10 Gbps, but its maximum distance strictly drops to **55 meters**.
+* **Category 7 (Cat 7):** Supports 10 Gbps up to 100 meters. Strictly shielded.
+* **Category 8 (Cat 8):** Designed specifically for Data Center equipment. Supports extreme speeds of 25 Gbps (25GBASE-T) and 40 Gbps (40GBASE-T), but strictly limited to short distances of **30 meters**.
+* **Coaxial Cable Anatomy & Usage:**
+  * It is a **Copper** cable.
+  * Contains a single, central conductor surrounded by thick insulation and braided shielding.
+  * The heavy shielding provides massive protection against **external interference (EMI)**.
+  * *Primary Use:* Broadband Internet access (DOCSIS) and Cable Television.
