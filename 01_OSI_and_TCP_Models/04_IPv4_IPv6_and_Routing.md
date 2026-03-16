@@ -68,3 +68,13 @@
   * `11111100` = 252
   * `11111110` = 254
   * `11111111` = 255
+
+## 4. Calculating Subnets and Hosts (Objective 1.7 - Transcript Verified)
+* **Variable Length Subnet Masks (VLSM):** The process of borrowing host bits (0s) and turning them into network bits (1s) to slice a large default network into smaller, customized subnets.
+* **Calculating the Number of Hosts:**
+  * *Formula:* **2^h - 2** (where *h* is the number of remaining host bits/zeros).
+  * *Why subtract 2?:* You can never assign the very first IP (The Network Address) or the very last IP (The Broadcast Address) to a physical host.
+* **Calculating the Number of Subnets:**
+  * *Formula:* **2^s** (where *s* is the number of *borrowed* subnet bits past the default class boundary).
+  * *Default Boundaries:* Class A defaults to /8. Class B defaults to /16. Class C defaults to /24.
+  * *Example:* If you have a Class C address (`192.168.1.x`) but use a `/26` mask, you have borrowed **2** bits past the default /24 boundary. (2^2 = 4 subnets created).
