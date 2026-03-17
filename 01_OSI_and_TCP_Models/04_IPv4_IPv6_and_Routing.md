@@ -130,3 +130,18 @@ Created to solve the exhaustion of the IPv4 address space.
   * *Advantages:* Zero CPU/Memory overhead, highly secure (no routing broadcasts), and very fast to implement on small networks.
   * *Ideal Use Case:* **Stub Networks** (remote locations with only a single uplink/exit point to the internet).
   * *Disadvantages:* Does not scale to large enterprise networks, highly prone to human error (e.g., routing loops), and completely lacks fault tolerance (will not automatically reroute traffic if a link fails).
+
+## 10. Dynamic Routing Protocols (Objective 2.1 - Transcript Verified)
+Dynamic routing allows routers to automatically discover network paths and automatically failover if a link drops. Requires CPU and memory overhead to maintain.
+
+* **Autonomous System (AS):** A routed network under the control of a single administrative entity.
+* **OSPF (Open Shortest Path First):**
+  * *Type:* Interior Gateway Protocol (IGP) / Link-State.
+  * *Features:* An open standard supported by almost all vendors.
+  * *Metric:* Uses **Cost** (based on link bandwidth/speed) to determine the best path.
+* **EIGRP (Enhanced Interior Gateway Routing Protocol):**
+  * *Type:* Interior Gateway Protocol (IGP).
+  * *Features:* Highly Cisco-centric. Offers very fast convergence and efficient routing updates.
+* **BGP (Border Gateway Protocol):**
+  * *Type:* External Gateway Protocol (EGP).
+  * *Features:* The routing protocol of the global Internet. Used to connect entirely different Autonomous Systems together.
