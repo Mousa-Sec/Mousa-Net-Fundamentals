@@ -78,3 +78,19 @@
   * *Formula:* **2^s** (where *s* is the number of *borrowed* subnet bits past the default class boundary).
   * *Default Boundaries:* Class A defaults to /8. Class B defaults to /16. Class C defaults to /24.
   * *Example:* If you have a Class C address (`192.168.1.x`) but use a `/26` mask, you have borrowed **2** bits past the default /24 boundary. (2^2 = 4 subnets created).
+
+## 5. Magic Number Subnetting Algorithm (Objective 1.7 - Transcript Verified)
+A rapid calculation method to determine network boundaries without converting to binary.
+
+* **Step 1: Identify the Interesting Octet:**
+  * In the Subnet Mask, any octet that is `255` means the IP address is copied down exactly.
+  * Any octet that is `0` becomes a `0` in the Network ID.
+  * The octet that is a unique number (e.g., 192, 224, 240) is the "Interesting Octet".
+* **Step 2: Calculate the Magic Number:**
+  * Formula: **`256 - [Interesting Octet Value]`**.
+  * The result is your "Block Size" (the increment between each distinct network).
+* **Step 3: Map the Network Boundaries:**
+  * *Subnet ID (Network Address):* The starting multiple of your Magic Number that contains the target IP address.
+  * *Broadcast Address:* The very last IP before the *next* Magic Number block begins.
+  * *First Usable Host:* Subnet ID + 1.
+  * *Last Usable Host:* Broadcast Address - 1.
