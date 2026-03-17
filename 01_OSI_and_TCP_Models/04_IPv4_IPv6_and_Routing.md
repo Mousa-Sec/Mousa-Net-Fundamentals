@@ -94,3 +94,18 @@ A rapid calculation method to determine network boundaries without converting to
   * *Broadcast Address:* The very last IP before the *next* Magic Number block begins.
   * *First Usable Host:* Subnet ID + 1.
   * *Last Usable Host:* Broadcast Address - 1.
+
+## 6. Seven Second Subnetting (Objective 1.7 - Transcript Verified)
+An exam-day shortcut that removes the need for binary conversion. 
+
+* **Step 1: The Whiteboard Chart**
+  * *Decimal Mask:* `128 | 192 | 224 | 240 | 248 | 252 | 254 | 255`
+  * *Block Size (Addresses):* `128 |  64 |  32 |  16 |   8 |   4 |   2 |   1`
+* **Step 2: The Execution Steps**
+  1. *Convert to Decimal:* Use the CIDR notation to locate the specific octet and drop down to find the Decimal Mask.
+  2. *Find the Subnet Address:* Look at the Block Size row. Count up by that block size from zero until you find the specific range your target IP falls into. The starting number of that block is your Network Address.
+  3. *Find the Broadcast Address:* The last number before the *next* block begins.
+  4. *Usable Range:* Network + 1 (First IP), and Broadcast - 1 (Last IP).
+* **The 255 / 0 Rule:**
+  * Mask is `255`: Bring the IP address down exactly as it is.
+  * Mask is `0`: Bring down a `0` (for Network ID) or a `255` (for Broadcast ID).
