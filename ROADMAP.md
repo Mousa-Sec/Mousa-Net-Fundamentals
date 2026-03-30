@@ -1,52 +1,52 @@
 # CompTIA Network+ (N10-009) 30-Day Master Roadmap
 
 ## Phase 1: Networking Concepts (Domain 1 - 23%) 
-* **Day 1:** OSI & TCP/IP Models
-* **Day 2:** Network Topologies & Types (LAN, WAN, SD-WAN)
-* **Day 3:** The Physical Layer (Cables, Fiber, Connectors)
-* **Day 4:** IPv4, IPv6, Subnetting Math, and Routing Protocols
-* **Day 5:** Network Devices, Port Numbers, and Protocols
+* **Day 1:** OSI & TCP/IP Models 
+* **Day 2:** Network Topologies & Types (LAN, WAN, Spine/Leaf) 
+* **Day 3:** The Physical Layer (Cables, Transceivers, Connectors) 
+* **Day 4:** IPv4, IPv6, and Subnetting Math 
+* **Day 5:** Network Appliances, Ports, and Protocols 
+* **Day 6:** Cloud Concepts (VPC, NFV, SaaS/IaaS/PaaS)
 
 ---
 
-## Phase 2: Network Implementations (Domain 2 - 18%)
-* **Day 6:** Advanced Switching Features (VLANs, STP, PoE)
-* **Day 7:** Wireless Standards and Cryptography (Wi-Fi 6/7, WPA3)
-* **Day 8:** Enterprise Wireless Architecture (WLCs, AP Placement)
-* **Day 9:** Cloud Concepts & Connectivity (IaaS, PaaS, SaaS, VPCs)
-* **Day 10:** Virtualization & SANs (Hypervisors, vSwitches, iSCSI)
+## Phase 2: Network Implementation (Domain 2 - 20%)
+* **Day 7:** Routing Technologies (Static, Dynamic, OSPF, BGP, NAT)
+* **Day 8:** Switching Technologies (VLANs, STP, MTU, Jumbo Frames)
+* **Day 9:** Wireless Infrastructure (Channels, SSIDs, Encryption, APs)
+* **Day 10:** Physical Installations & Environmental Factors
 
 ---
 
-## Phase 3: Network Operations (Domain 3 - 15%)
-* **Day 11:** Network Monitoring & Metrics (SNMP, Syslog, NetFlow)
-* **Day 12:** Organizational Documents (SOPs, NDAs, Network Diagrams)
-* **Day 13:** Disaster Recovery & Backups (Hot/Cold sites, RPO/RTO)
-* **Day 14:** High Availability (Load Balancing, Redundancy, FHRP)
+## Phase 3: Network Operations (Domain 3 - 19%)
+* **Day 11:** Network Monitoring (SNMP, Flow data, Packet Capture)
+* **Day 12:** Documentation & Lifecycle Management (Diagrams, IPAM, EOL)
+* **Day 13:** Disaster Recovery & High Availability (RPO/RTO, Hot/Cold Sites)
+* **Day 14:** Network Services (DHCP, DNS, NTP) & Secure Access (VPN, SSH)
 
 ---
 
 ## Phase 4: Network Security (Domain 4 - 14%)
-* **Day 15:** The CIA Triad, AAA, and Access Control Models
-* **Day 16:** Network Attacks (Spoofing, VLAN Hopping, DDoS)
-* **Day 17:** Device & Network Hardening (Port Security, MAC Filtering)
-* **Day 18:** Physical Security (Mantraps, Badges, Biometrics)
+* **Day 15:** Security Concepts & Authentication (IAM, MFA, RADIUS, SAML)
+* **Day 16:** Physical Security & Deception Tech (Locks, Honeypots)
+* **Day 17:** Network Segmentation & Compliance (IoT, SCADA, PCI DSS)
+* **Day 18:** Network Attacks (DoS, VLAN Hopping, ARP/DNS Poisoning)
+* **Day 19:** Device Hardening & Defense (NAC, ACLs, URL Filtering)
 
 ---
 
-## Phase 5: Network Troubleshooting (Domain 5 - 30%)
-* **Day 19:** The CompTIA Troubleshooting Methodology (The 7 Steps)
-* **Day 20:** Command Line Tools (ping, tracert, netstat, nmap, tcpdump)
-* **Day 21:** Troubleshooting Physical Cabling Issues (Attenuation, Crosstalk)
-* **Day 22:** Troubleshooting Wireless Issues (Interference, Channel Overlap)
-* **Day 23:** Troubleshooting Network Services (DHCP exhaustion, DNS failures)
-* **Day 24:** Troubleshooting Routing & Switching (Loops, Asymmetric Routing)
+## Phase 5: Network Troubleshooting (Domain 5 - 24%)
+* **Day 20:** The CompTIA 7-Step Troubleshooting Methodology
+* **Day 21:** Cabling, Hardware, and Physical Interface Issues
+* **Day 22:** Network Services Issues (IP Exhaustion, STP/VLAN misconfigurations)
+* **Day 23:** Performance Issues (Latency, Congestion, Wireless Interference)
+* **Day 24:** Software Tools (Protocol Analyzers, Wi-Fi Analyzers, CLI Utilities)
 
 ---
 
 ## Phase 6: The Final Grind (Review & Practice)
-* **Day 25:** Subnetting Speed Drills
-* **Day 26:** Port Number & Protocol Flashcard Review
+* **Day 25:** Subnetting & Routing Speed Drills
+* **Day 26:** Port Number, Protocol, and Acronym Flashcards
 * **Day 27:** Practice Exam 1 & Weakness Review
 * **Day 28:** Practice Exam 2 & Weakness Review
 * **Day 29:** Practice Exam 3 & Weakness Review
