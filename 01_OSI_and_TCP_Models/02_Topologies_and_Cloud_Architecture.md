@@ -2,6 +2,7 @@
 
 ## Network Architecture Types
 * **Star Topology:** All nodes connect to a central device (switch). Single point of failure at the center.
+* **Ring Topology:** Nodes form a closed loop, each connecting to exactly two neighbors. Single break splits network.
 * **Mesh Topology:** All nodes connect to each other. High fault tolerance, high cost.
 * **SD-WAN:** Software-Defined WAN. Dynamically routes traffic across multiple connection types (Internet, MPLS, 4G/5G) based on real-time performance.
 
