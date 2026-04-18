@@ -2,6 +2,7 @@
 
 ## Network Architecture Types
 * **Star Topology:** All nodes connect to a central device (switch). Single point of failure at the center.
+* **Ring Topology:** Nodes form a closed loop, each connecting to exactly two neighbors. Single break splits network.
 * **Mesh Topology:** All nodes connect to each other. High fault tolerance, high cost.
 * **SD-WAN:** Software-Defined WAN. Dynamically routes traffic across multiple connection types (Internet, MPLS, 4G/5G) based on real-time performance.
 
@@ -53,7 +54,7 @@ Modern networks separate the decision-making from the actual data forwarding.
 ## 7. Cloud Routing & Architecture (Objective 1.3 - Transcript Verified)
 * **VPC (Virtual Private Cloud):** A logically isolated virtual network within a public cloud environment where you deploy infrastructure (servers, load balancers, etc.).
 * **Transit Gateway:** Acts as a central "cloud router." It connects multiple different VPCs together, allowing instances in separate VPCs to communicate with each other seamlessly.
-* **VPC Endpoint:** Creates a private, direct connection between your VPC and another cloud service (even across different cloud providers) without the traffic ever crossing the public internet.
+* **VPC Endpoint:** creates a private, direct connection between your VPC and services within the same cloud provider (e.g., AWS S3, DynamoDB, or other AWS services) without crossing the public internet.
 * **VPN Connection:** Allows remote physical sites or individual users to establish an encrypted tunnel directly into the private VPC over the internet.
 
 ## 8. Cloud Gateways & Firewalls (Objective 1.3 - Transcript Verified)
