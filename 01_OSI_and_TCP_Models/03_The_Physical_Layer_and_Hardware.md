@@ -105,6 +105,13 @@ Use the suffix to identify the media type instantly:
 * **1000BASE-LX:** 1 Gbps Single-mode fiber (up to 10km).
 * **10GBASE-LR:** 10 Gbps Single-mode fiber (up to 10km).
 
+* ## 10. The DAC (Direct Attach Copper) Deep-Dive
+* **Definition:** A high-speed cable assembly using **Twinaxial** cabling with transceivers (SFP+/QSFP) permanently attached to both ends.
+* **Speed:** Extremely high-speed (10G, 40G, 100G) with the lowest possible latency.
+* **Distance:** Strictly **Short-Range** (typically < 7 meters).
+* **Application:** "Top-of-Rack" (ToR) switching in data centers to connect servers to switches within the same rack.
+* **Standard:** Matches the **-CR** (Copper Direct Attach) suffix in 802.3 naming.
+
 ### **The "C" Family (Copper / Twinax)**
 * **10GBASE-CX4:** 10 Gbps over Copper/Twinax (short distances).
 * **10GBASE-CR:** 10 Gbps Direct Attach Copper (Twinax) used in racks.
