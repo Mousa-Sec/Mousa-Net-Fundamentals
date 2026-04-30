@@ -43,3 +43,13 @@ Connecting redundant cables between switches creates a **Switching Loop**. Becau
 * **Half-Duplex:** One-way communication at a time (Legacy hubs).
 * **Full-Duplex:** Two-way simultaneous communication (Modern switches).
 * **Auto-Negotiation:** The process where two connected devices "talk" to decide the fastest speed and duplex mode they both support.
+
+## 6. Advanced Switching Concepts (Exam Patch)
+* **LACP (Link Aggregation Control Protocol - 802.3ad):** Bundles multiple physical ports into one logical channel for increased bandwidth and redundancy.
+* **Voice VLAN:** A dedicated VLAN for VoIP traffic that automatically applies QoS to ensure call quality.
+* **VLAN Database:** The central storage on a switch that maintains the list of all configured VLANs.
+
+## 7. Transmission & Duplex Modes
+* **Half-Duplex:** One-way communication at a time (Legacy hubs).
+* **Full-Duplex:** Two-way simultaneous communication (Modern switches).
+* **Auto-Negotiation:** The process where two connected devices "talk" to decide the fastest speed and duplex mode they both support.
