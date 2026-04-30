@@ -33,3 +33,13 @@ Connecting redundant cables between switches creates a **Switching Loop**. Becau
 ## 5. Port Mirroring / SPAN
 * **Function:** Takes all the traffic crossing one switch port (or an entire VLAN) and sends an exact copy of it out a different port.
 * **Use Case:** You plug a laptop running Wireshark (Protocol Analyzer) or an IDS (Intrusion Detection System) into the mirror port to monitor network traffic without taking the actual devices offline or putting your security tools in-line with the data flow.
+
+## 6. Advanced Switching Concepts (Exam Patch)
+* **LACP (Link Aggregation Control Protocol - 802.3ad):** Bundles multiple physical ports into one logical channel for increased bandwidth and redundancy.
+* **Voice VLAN:** A dedicated VLAN for VoIP traffic that automatically applies QoS to ensure call quality.
+* **VLAN Database:** The central storage on a switch that maintains the list of all configured VLANs.
+
+## 7. Transmission & Duplex Modes
+* **Half-Duplex:** One-way communication at a time (Legacy hubs).
+* **Full-Duplex:** Two-way simultaneous communication (Modern switches).
+* **Auto-Negotiation:** The process where two connected devices "talk" to decide the fastest speed and duplex mode they both support.
