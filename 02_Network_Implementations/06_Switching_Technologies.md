@@ -40,6 +40,7 @@ Connecting redundant cables between switches creates a **Switching Loop**. Becau
 * **VLAN Database:** The central storage on a switch that maintains the list of all configured VLANs.
 
 ## 7. Transmission & Duplex Modes
+**Simplex:** Permanent unidirectional communication (One-way only). Sender sends, receiver only receives (e.g., Radio broadcast).
 * **Half-Duplex:** One-way communication at a time (Legacy hubs).
 * **Full-Duplex:** Two-way simultaneous communication (Modern switches).
 * **Auto-Negotiation:** The process where two connected devices "talk" to decide the fastest speed and duplex mode they both support.
