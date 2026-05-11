@@ -40,3 +40,12 @@ Professor Messer highlights several granular operational documents and tools tha
 * **IPAM (IP Address Management):** Centralized software used to plan, track, and monitor DHCP scopes and IPv4/IPv6 assignments. Crucial for auditing and security, as it tracks which specific user/device had a dynamic IP address at any given date and time.
 * **SLA (Service Level Agreement):** A contractual guarantee between an organization and a service provider defining the absolute minimum acceptable level of service (e.g., guaranteeing 99.99% uptime or a maximum 4-hour response time to an outage).
 * **Wireless Site Surveys & Heat Maps:** The process of auditing a physical space to chart frequency usage and identify interference. A **Heat Map** provides a visual, color-coded floor plan showing wireless signal strength and propagation.
+
+## 5. Disaster Recovery Testing & Planning (Exam Patch)
+* **DRP (Disaster Recovery Plan):** The comprehensive document detailing exactly how the organization will respond to and recover from an outage.
+* **Tabletop Exercise:** A simulated test where personnel sit in a conference room and verbally step through a disaster scenario. Tests the logistics of the plan without the high cost and downtime of physically moving equipment.
+* **Validation Testing:** A full-scale physical test of the DRP (e.g., actively failing over to the backup site) to document what works and what needs improvement.
+
+## 6. Additional Documentation Details (Exam Patch)
+* **Diagramming Software:** Standard third-party tools for creating physical and logical maps include Microsoft Visio, OmniGraffle, and Gliffy.
+* **Asset Database Licensing:** Tracking physical hardware assets is mandatory for maintaining **Software License compliance** and avoiding legal/financial penalties from software vendors.
