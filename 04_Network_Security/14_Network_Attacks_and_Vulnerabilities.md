@@ -36,3 +36,35 @@ To defend against these attacks, we use:
 * **Anti-DDoS Services:** (e.g., Cloudflare, Akamai) that act as a massive "filter" to absorb the traffic before it hits the company's edge.
 * **IPS/Firewall Rate Limiting:** Automatically dropping traffic if a single IP or protocol exceeds a certain threshold.
 * **Sinkholing:** Redirecting malicious traffic to a "dead end" (null interface) to protect the rest of the network.
+
+## 5. VLAN Hopping
+VLANs are designed to keep network traffic separated at Layer 2. VLAN Hopping is a technique used by attackers to bypass this isolation and send traffic to a different VLAN without passing through a router.
+
+### Method A: Switch Spoofing
+This attack exploits the **Dynamic Trunking Protocol (DTP)** which is often enabled by default on switch ports to allow for "Plug-and-Play" networking.
+* **The Attack:** The attacker’s machine sends DTP packets to the switch, pretending to be another switch. The switch is "tricked" into negotiating a **Trunk Link** with the attacker.
+* **The Result:** Once the trunk is established, the attacker has access to **all VLANs** allowed on that trunk.
+* **Defense:**
+  * Disable DTP (autonegotiation) on all end-user ports.
+  * Manually configure ports as `access` ports and explicitly define trunk ports.
+
+
+### Method B: Double Tagging
+This is a more sophisticated Layer 2 attack that exploits how switches handle the **Native VLAN** and 802.1Q tags.
+* **The Requirements:**
+  1. The attacker must be connected to a port on the **Native VLAN** (usually VLAN 1 by default).
+  2. There must be a trunk link between the attacker's switch and the target's switch.
+* **The Attack:**
+  1. The attacker crafts a frame with **two 802.1Q tags**. 
+  2. The **Outer Tag** matches the Native VLAN of the trunk.
+  3. The **Inner Tag** matches the Victim's VLAN.
+* **The Flow:**
+  1. The first switch receives the frame, sees the Outer Tag matches the Native VLAN, and **strips the tag** before sending it across the trunk.
+  2. The second switch receives the frame, sees only the **Inner Tag** remains, and assumes the frame belongs to the Victim's VLAN.
+  3. The frame is delivered to the victim.
+* **The Catch:** This is **one-way communication only**. The attacker can send data (like a DoS or a malicious command), but the response will not come back to them.
+* **Defense:**
+  * **Change the Native VLAN** from the default (VLAN 1) to an unused ID.
+  * Force **tagging of the Native VLAN** across all trunks so the first switch doesn't strip the outer tag.
+  * Move all end-user ports off of the Native VLAN.
+
