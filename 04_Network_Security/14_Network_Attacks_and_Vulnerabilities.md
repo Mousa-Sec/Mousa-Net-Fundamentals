@@ -93,3 +93,29 @@ Modern managed switches have a feature called **Port Security** to prevent this 
   * **Protect:** Drops traffic from the extra MACs but keeps the port up.
   * **Restrict:** Drops traffic and sends a log message/SNMP trap.
   * **Shutdown:** Disables the entire physical port (requires an admin to manually turn it back on).
+
+## 7. Spoofing and Poisoning Attacks
+Spoofing occurs when a person or device pretends to be another to gain unauthorized access or intercept data. This is a primary driver for **On-path attacks** (formerly Man-in-the-Middle).
+
+### A. ARP Poisoning (Layer 2)
+ARP (Address Resolution Protocol) maps an IP address to a physical MAC address. It has **no built-in authentication**, which attackers exploit.
+* **The Normal Process:** A device broadcasts "Who has 192.168.1.1?" and the legitimate router responds with its MAC address. The device then stores this in its **ARP Cache**.
+* **The Attack:** The attacker sends **unsolicited ARP responses** to a victim machine, claiming to be the gateway (e.g., "I am 192.168.1.1, and here is my MAC").
+* **The Result:** The victim updates its ARP cache with the **attacker's MAC address**. 
+* **Impact:** All traffic intended for the router is sent to the attacker first. The attacker then forwards the traffic to the real router so the victim never notices the delay.
+* **Defense:** **DAI (Dynamic ARP Inspection)** on switches, which validates ARP packets against a trusted database (DHCP Snooping binding table).
+
+### B. DNS Poisoning (Layer 3/7)
+DNS Poisoning (or Spoofing) redirects users to a malicious website by providing a fake IP address in response to a domain name query.
+* **Methods of Execution:**
+  1. **Modifying the Hosts File:** Attackers gain access to a local machine and edit the `hosts` file. Since this file is checked **before** DNS, the local machine will always go to the attacker's IP.
+  2. **On-path DNS Redirection:** The attacker sits in the middle and intercepts a DNS request, sending back a fake response before the real DNS server can.
+  3. **DNS Server Compromise:** The attacker hacks the DNS server directly and changes the actual records (e.g., changing the IP for `bank.com` to the attacker's server).
+* **The Impact:** Users believe they are on a legitimate site (like their bank), but they are actually entering credentials into a fake site owned by the attacker.
+* **Defense:** **DNSSEC (Domain Name System Security Extensions)**, which uses digital signatures to verify that the DNS response is legitimate and hasn't been altered.
+
+
+## 8. On-Path Attacks (Formerly Man-in-the-Middle)
+While ARP and DNS poisoning are the *methods*, the **On-path attack** is the *result*. 
+* **Intercept & Modify:** The attacker doesn't just watch the traffic; they can actively change it (e.g., changing the recipient's bank account number in a wire transfer request).
+* **Invisible Presence:** If done correctly, the attacker is completely transparent. Both endpoints believe they are talking directly to each other.
