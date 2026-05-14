@@ -119,3 +119,40 @@ DNS Poisoning (or Spoofing) redirects users to a malicious website by providing 
 While ARP and DNS poisoning are the *methods*, the **On-path attack** is the *result*. 
 * **Intercept & Modify:** The attacker doesn't just watch the traffic; they can actively change it (e.g., changing the recipient's bank account number in a wire transfer request).
 * **Invisible Presence:** If done correctly, the attacker is completely transparent. Both endpoints believe they are talking directly to each other.
+
+## 9. Rogue Services
+Rogue services are unauthorized servers or devices added to a network that can cause disruption, data theft, or provide backdoor access.
+
+### A. Rogue DHCP Server
+DHCP has no built-in security; any device can respond to a DHCP discover broadcast.
+* **The Attack:** An unauthorized device begins handing out IP addresses.
+* **The Impact:**
+  * **Network Disruption:** Providing invalid gateway addresses or duplicate IPs, causing a DoS.
+  * **On-Path Initiation:** Setting the "Default Gateway" to the attacker's IP so all traffic flows through them.
+* **Defense:**
+  * **DHCP Snooping:** An L2 switch feature that identifies "Trusted" ports (where the real DHCP server is) and "Untrusted" ports (users). The switch drops any DHCP *responses* coming from untrusted ports.
+  * **AD Authorization:** In Windows environments, only authorized DHCP servers in Active Directory are allowed to start.
+* **Remediation:** Physically remove the device and force all clients to `release/renew` their IP leases.
+
+### B. Rogue Access Point (AP)
+A physical wireless access point plugged into a wall jack without authorization.
+* **The Motivation:** Could be a "helpful" employee trying to get better Wi-Fi or a malicious actor.
+* **The Risk:** Opens a wide, unmanaged hole in the network perimeter, often bypassing firewalls and NAC.
+* **Defense:**
+  * **802.1X (NAC):** Requires the AP itself to authenticate to the switch before the port is enabled.
+  * **Wireless Intrusion Prevention Systems (WIPS):** Scans for unauthorized SSIDs.
+
+
+### C. Wireless Evil Twin
+A malicious version of a Rogue AP designed for deception.
+* **The Attack:** The attacker configures an AP with the **exact same SSID** and security settings as the legitimate corporate or public Wi-Fi.
+* **The Tactics:**
+  * **Radio Power:** The attacker increases the broadcast power to "overpower" the real AP, forcing devices to roam to the stronger (evil) signal.
+  * **Captive Portals:** Duplicating the login page of a hotel or coffee shop to steal credentials.
+* **Defense:** * **Encryption:** Always use a VPN or HTTPS so the attacker sees only encrypted "gibberish."
+  * **User Education:** Training users to look for certificate warnings.
+
+## 10. On-Path Attacks (Final Summary)
+The video emphasizes that **On-Path (Man-in-the-Middle)** is the *ultimate goal* of many of these attacks (ARP poisoning, Rogue DHCP, Evil Twins).
+* **Core Action:** Receive, examine/modify, and forward.
+* **Primary Mitigation:** **Encryption at all layers.** Even if the attacker sits in the middle, they cannot read the payload if it is encrypted via TLS/HTTPS or a VPN.
